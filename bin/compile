@@ -120,7 +120,7 @@ cd "$APP_SOURCE_DIR"
 
 if [ -n "${PROCFILE_PATH}" ] ; then
   echo "-----> Copying Procfile ${PROCFILE_PATH} to root"
-  cp ${PROCFILE_PATH} ${APP_SOURCE_DIR}
+  cp ${PROCFILE_PATH} ${APP_SOURCE_DIR}/Procfile
 fi
 
 echo "-----> Target Meteor version: `METEOR --version`"
