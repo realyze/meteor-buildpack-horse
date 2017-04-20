@@ -118,6 +118,11 @@ function METEOR {
 # than the "latest" that is installed by install.meteor.com.
 cd "$APP_SOURCE_DIR"
 
+if [ -n "${PROCFILE_PATH}" ] ; then
+  echo "-----> Copying Procfile ${PROCFILE_PATH} to root"
+  cp ${PROCFILE_PATH} ${APP_SOURCE_DIR}
+fi
+
 echo "-----> Target Meteor version: `METEOR --version`"
 
 # Deal with non-server build targets.  Determine if we have --server-only flag
